@@ -6,12 +6,14 @@ import Header from '../components/Header'
 import MainSection from '../components/MainSection'
 import * as TodoActions from '../actions'
 
-const App = ({todos, actions}) => (
-  <div>
-    <Header addTodo={actions.addTodo} />
-    <MainSection todos={todos} actions={actions} />
-  </div>
-)
+const App = ({todos, actions}) => {
+  return (
+    <div>
+      <Header addTodo={actions.addTodo} />
+      <MainSection todos={todos} actions={actions} />
+    </div>
+  )
+}
 
 App.propTypes = {
   todos: PropTypes.array.isRequired,
